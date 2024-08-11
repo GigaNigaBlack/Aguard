@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Guard</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <pre id="json-output"></pre>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="galaxy"></div>
+    
+    <div class="content">
+        <section class="intro">
+            <h1 id="astro-guard">Astro Guard</h1>
+            <p id="team-name">- By Team Pineapple</p>
+        </section>
+
+        <section class="description">
+            <p id="description-paragraph">The Risk List is a catalogue of all objects for which a non-zero impact probability has been computed. Each entry contains details on the particular Earth approach which poses the highest risk of impact. It includes its date, size, velocity, and probability.</p>
+        </section>
+
+       
+       
+        <section class="table-section">
+            <h1>Near-Earth Object Data</h1>
+            <table id="neo-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Object Designation</th>
+                        <th>Diameter (m^2)</th>
+                        <th>Impact Probability</th>
+                        <th>Palermo Scale(PS max)</th>
+                        <th>Velocity (km/s)</th>
+                        <th>Impact Time</th> 
+                    </tr>
+                </thead>
+                <tbody id="neo-table-body">
+                    <!-- JavaScript will insert rows here -->
+                </tbody>
+            </table>
+    <script src="/static/main.js"></script>
+        </section>
+        
+    <section class="pagination">
+      <button id="prev-page">Previous</button>
+      <span id="page-info">Page 1</span>
+      <button id="next-page"">Next</button>
+    </section>
+
+    <!-- Compare Section -->
+    <section id="compare">
+      <h2>Compare NEOs</h2>
+      <div class="compare-container">
+        <div class="compare-select">
+          <label for="neo1">Select NEO 1:</label>
+          <select id="neo1" name="neo1">
+            <!-- 50 options for NEO 1 -->
+            <option value="2023VD3">2023VD3</option>
+             <option value="1979XB">1979XB</option>
+  <option value="2008JL3">2008JL3</option>
+  <option value="2000SG344">2000SG344</option>
+  <option value="2005QK76">2005QK76</option>
+  <option value="2023DO">2023DO</option>
+  <option value="2021GX9">2021GX9</option>
+  <option value="2007KE4">2007KE4</option>
+  <option value="2019VB37">2019VB37</option>
+  <option value="2016YM4">2016YM4</option>
+  <option value="2011DU9">2011DU9</option>
+  <option value="2012QD8">2012QD8</option>
+  <option value="2018JD">2018JD</option>
+  <option value="2020VV">2020VV</option>
+  <option value="2017AE21">2017AE21</option>
+  <option value="2022YO1">2022YO1</option>
+  <option value="2024JW16">2024JW16</option>
+  <option value="2022UY14">2022UY14</option>
+  <option value="2014CR13">2014CR13</option>
+  <option value="2021EU">2021EU</option>
+  <option value="2008FF5">2008FF5</option>
+  <option value="2006JY26">2006JY26</option>
+  <option value="2020VW">2020VW</option>
+  <option value="2017WT28">2017WT28</option>
+  <option value="2022NX1">2022NX1</option>
+  <option value="2007DX40">2007DX40</option>
+  <option value="2014GN1">2014GN1</option>
+  <option value="2013VW13">2013VW13</option>
+  <option value="2007VE8">2007VE8</option>
+  <option value="2008UB7">2008UB7</option>
+  <option value="2021GE2">2021GE2</option>
+  <option value="2013TP4">2013TP4</option>
+  <option value="2008EX5">2008EX5</option>
+  <option value="2020KD3">2020KD3</option>
+  <option value="2018TY4">2018TY4</option>
+  <option value="2020CQ1">2020CQ1</option>
+  <option value="2022SX55">2022SX55</option>
+  <option value="2006DM63">2006DM63</option>
+  <option value="2020OB">2020OB</option>
+  <option value="2022AT2">2022AT2</option>
+  <option value="2015YJ">2015YJ</option>
+  <option value="2009BE">2009BE</option>
+  <option value="2022YS6">2022YS6</option>
+  <option value="2023AC2">2023AC2</option>
+  <option value="2010UK">2010UK</option>
+  <option value="2024FS5">2024FS5</option>
+  <option value="2020MJ">2020MJ</option>
+  <option value="2021AM6">2021AM6</option>
+  <option value="2018DQ">2018DQ</option>
+  <option value="2016WG">2016WG</option>
+            
+          </select>
+        </div>
+        <div class="compare-select">
+          <label for="neo2">Select NEO 2:</label>
+          <select id="neo2" name="neo2">
+           
+            <option value="2023VD3">2023VD3</option>
+  <option value="1979XB">1979XB</option>
+  <option value="2008JL3">2008JL3</option>
+  <option value="2000SG344">2000SG344</option>
+  <option value="2005QK76">2005QK76</option>
+  <option value="2023DO">2023DO</option>
+  <option value="2021GX9">2021GX9</option>
+  <option value="2007KE4">2007KE4</option>
+  <option value="2019VB37">2019VB37</option>
+  <option value="2016YM4">2016YM4</option>
+  <option value="2011DU9">2011DU9</option>
+  <option value="2012QD8">2012QD8</option>
+  <option value="2018JD">2018JD</option>
+  <option value="2020VV">2020VV</option>
+  <option value="2017AE21">2017AE21</option>
+  <option value="2022YO1">2022YO1</option>
+  <option value="2024JW16">2024JW16</option>
+  <option value="2022UY14">2022UY14</option>
+  <option value="2014CR13">2014CR13</option>
+  <option value="2021EU">2021EU</option>
+  <option value="2008FF5">2008FF5</option>
+  <option value="2006JY26">2006JY26</option>
+  <option value="2020VW">2020VW</option>
+  <option value="2017WT28">2017WT28</option>
+  <option value="2022NX1">2022NX1</option>
+  <option value="2007DX40">2007DX40</option>
+  <option value="2014GN1">2014GN1</option>
+  <option value="2013VW13">2013VW13</option>
+  <option value="2007VE8">2007VE8</option>
+  <option value="2008UB7">2008UB7</option>
+  <option value="2021GE2">2021GE2</option>
+  <option value="2013TP4">2013TP4</option>
+  <option value="2008EX5">2008EX5</option>
+  <option value="2020KD3">2020KD3</option>
+  <option value="2018TY4">2018TY4</option>
+  <option value="2020CQ1">2020CQ1</option>
+  <option value="2022SX55">2022SX55</option>
+  <option value="2006DM63">2006DM63</option>
+  <option value="2020OB">2020OB</option>
+  <option value="2022AT2">2022AT2</option>
+  <option value="2015YJ">2015YJ</option>
+  <option value="2009BE">2009BE</option>
+  <option value="2022YS6">2022YS6</option>
+  <option value="2023AC2">2023AC2</option>
+  <option value="2010UK">2010UK</option>
+  <option value="2024FS5">2024FS5</option>
+  <option value="2020MJ">2020MJ</option>
+  <option value="2021AM6">2021AM6</option>
+  <option value="2018DQ">2018DQ</option>
+  <option value="2016WG">2016WG</option>
+          </select>
+        </div>
+        <button id="compare-btn">Compare</button>
+      </div>
+      <div id="compare-table">
+        
+      </div>
+    </section>
+
+    <section class="retro-display">
+         <div class="earth-display">
+            <div class="earth-gif-container">
+                <img src="../static/earth.gif" alt="Spinning Earth" class="earth-gif">
+            </div>
+        </div>
+    </section>
+    </div>
+    <section class="ps-index">
+        <h2>PS Index</h2>
+        <select id="ps-index-dropdown">
+            <option value="" disabled selected>Select an option</option>
+            <option value="ps-index-info">What is PS Index?</option>
+        </select>
+        <div id="ps-index-info" class="dropdown-content">
+            <p>The Palermo Technical Impact Hazard Scale is a logarithmic scale used by astronomers to rate the potential hazard of impact of a near-Earth object (NEO). It combines two types of data—probability of impact and estimated kinetic yield—into a single "hazard" value. A rating of 0 means the hazard is equivalent to the background hazard (defined as the average risk posed by objects of the same size or larger over the years until the date of the potential impact). A rating of +2 would indicate the hazard is 100 times as great as a random background event. Scale values less than −2 reflect events for which there are no likely consequences, while Palermo Scale values between −2 and 0 indicate situations that merit careful monitoring. For more details, visit <a href="https://en.wikipedia.org/wiki/Palermo_Technical_Impact_Hazard_Scale" target="_blank">this page</a>.</p>
+        </div>
+    </section>
+</div>
+<section class="Impact-index">
+    <h2>Impact Probability</h2>
+    <select id="imp-index-dropdown">
+        <option value="" disabled selected>Select an option</option>
+        <option value="ps-index-info">What is Impact Probability?</option>
+    </select>
+    <div id="im-index-info" class="dropdown-content">
+        <p>To assess whether a given NEO can impact the Earth, we must do more than compute an orbit and predict how close that orbit comes to Earth. Because orbit computations are based on imperfect data, each asteroid will have a range possible orbits that match the observed sky positions. CNEOS designed the Sentry impact monitoring system to analyze the full range of possible orbits for each NEO, searching for potential Earth close approaches over the next 100 years and calculating the probability of impact for each. The results are tabulated on the S </p>
+    </div>
+</section>
+    
+    
+    
+
+    <script src="../static/main.js"></script>
+    <script>
+       
+
+       // JavaScript
+const compareBtn = document.getElementById('compare-btn');
+const compareTable = document.getElementById('compare-table');
+
+compareBtn.addEventListener('click', () => {
+  const neo1 = document.getElementById('neo1').value;
+  const neo2 = document.getElementById('neo2').value;
+
+  // Generate the compare table
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+
+  // Add table headers
+  const headers = ['Property', 'NEO 1', 'NEO 2'];
+  headers.forEach((header) => {
+    const th = document.createElement('th');
+    th.textContent = header;
+    thead.appendChild(th);
+  });
+
+  // Add table rows
+  const properties = ['Diameter', 'Velocity', 'Distance', 'Impact Probability'];
+  properties.forEach((property) => {
+    const row = document.createElement('tr');
+    const propCell = document.createElement('td');
+    propCell.textContent = property;
+    row.appendChild(propCell);
+
+    // Get the values for each NEO
+    const neo1Value = getNEOValue(neo1, property);
+    const neo2Value = getNEOValue(neo2, property);
+
+    // Create cells for each NEO
+    const neo1Cell = document.createElement('td');
+    neo1Cell.textContent = neo1Value;
+    row.appendChild(neo1Cell);
+
+    const neo2Cell = document.createElement('td');
+    neo2Cell.textContent = neo2Value;
+    row.appendChild(neo2Cell);
+
+    // Highlight the highest value
+    if (neo1Value > neo2Value) {
+      neo1Cell.style.backgroundColor = 'green';
+    } else if (neo2Value > neo1Value) {
+      neo2Cell.style.backgroundColor = 'green';
+    }
+
+    tbody.appendChild(row);
+  });
+
+  // Add the table to the page
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  compareTable.appendChild(table);
+})
+
+// Define the getNEOValue function
+function getNEOValue(neo, property) {
+  // TO DO: implement this function to retrieve the values for each NEO
+  // For example, you could use an API or a database to retrieve the values
+  return Math.random() * 100; // For demonstration purposes only
+}
+
+document.getElementById('ps-index-dropdown').addEventListener('change', function() {
+    var selectedValue = this.value;
+    var dropdownContent = document.getElementById('ps-index-info');
+    
+    if (selectedValue === 'ps-index-info') {
+        dropdownContent.style.display = 'block';
+    } else {
+        dropdownContent.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

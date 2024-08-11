@@ -1,0 +1,148 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cascadia Code', monospace;
+    color: #fff;
+    background-color: #000;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Fixed Earth GIF styling */
+.earth-gif-fixed {
+    position: left;
+    top: 0px; /* Position it near the top of the viewport */
+    right: 20px; /* Position it near the right edge of the viewport */
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    z-index: 10; /* Ensure it stays above other content */
+}
+
+.earth-gif-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Content Container */
+.content {
+    margin: 20px; /* General margin for content */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Title and Team Name */
+#astro-guard {
+    font-size: 4rem;
+    color: #ffffff;
+    font-style: bold;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+#team-name {
+    font-size: 2rem;
+    color: #fff763;
+    font-style: italic;
+    text-shadow: 0 0 10px #fff425;
+}
+
+/* Description Section */
+.description {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Description Paragraph */
+#description-paragraph {
+    font-size: 1.2rem;
+}
+
+/* Table Section */
+.table-section {
+    padding: 20px;
+}
+
+/* NEO Table Styles */
+#neo-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#neo-table th, #neo-table td {
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: left;
+}
+
+#neo-table th {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#neo-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Pagination Section */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Compare Section */
+#compare {
+    padding: 20px;
+}
+
+/* Compare Container */
+.compare-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Compare Select */
+.compare-select {
+    flex: 1;
+}
+
+/* Compare Table */
+#compare-table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#compare-table th, #compare-table td {
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: left;
+}
+
+#compare-table th {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#compare-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* PS Index Section */
+/* PS Index Section */
+/* PS Index Section */
